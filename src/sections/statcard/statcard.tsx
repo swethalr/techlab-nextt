@@ -38,10 +38,10 @@ export default function Stats() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-[#050505] py-20">
       <div className="z-10 mb-16 px-4 text-center">
-        <h2 className="h2 font-black uppercase italic tracking-tighter text-white">
+        <h2 className="h2  uppercase italic tracking-wider text-white">
           First Rank <span className="text-[#FF6A00]">SEO</span>
         </h2>
-        <h6 className="h6 mt-2 font-bold uppercase italic tracking-[0.5em] text-white/40">
+        <h6 className="h6 mt-2 font-bold uppercase italic tracking-[0.5em] text-white/60">
           Auto-rotating modules • Grab to override
         </h6>
       </div>
@@ -107,10 +107,10 @@ function SquareCube({ s, index }: { s: any; index: number }) {
           <div className="mb-4 rounded-2xl bg-black/20 p-4">
             {React.cloneElement(s.icon, { size: 40, className: 'text-white' })}
           </div>
-          <span className="text-6xl font-black tracking-tighter text-white">
+          <span className="text-xl font-black tracking-tighter text-white">
             {s.value}
           </span>
-          <p className="mt-2 text-xs font-bold uppercase tracking-widest text-white/70">
+          <p className="mt-2 p font-bold uppercase tracking-widest text-white/70">
             {s.label}
           </p>
         </div>

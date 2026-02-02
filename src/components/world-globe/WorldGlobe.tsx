@@ -72,7 +72,9 @@ const Marker = ({ position, country, isActive, globeRef }: MarkerProps) => {
             </div>
 
             <div className="flex flex-grow items-center overflow-hidden">
-              <p className="animate-typing-effect whitespace-nowrap border-r-[1px] border-blue-500 text-[7px] font-bold text-slate-700">
+              <p
+                key={`${country}-${isActive}`}
+                className="animate-typing-effect whitespace-nowrap border-r-[1px] border-blue-500 text-[7px] font-bold text-slate-700">
                 Google ranking Expert
               </p>
             </div>

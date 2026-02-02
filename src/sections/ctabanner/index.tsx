@@ -1,68 +1,94 @@
 'use client';
 
-
-import { ctaBannerData } from '@/data/brand-cta';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export function CtaBanner() {
-
-    const { title, subtitle, primaryBtn, secondaryBtn } = ctaBannerData;
+export default function CtaBanner() {
   return (
-    <section className="relative bg-white px-4 py-12 md:py-24">
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="relative flex min-h-[500px] w-full items-center justify-center overflow-hidden rounded-[32px] bg-slate-950 shadow-2xl">
+    <section className="relative bg-white px-4 py-20 font-sans overflow-hidden">
+      <div className="mx-auto w-full max-w-6xl">
+        {/* Main Banner Container with Exact Light Peach Gradient */}
+        <div className="relative flex min-h-[420px] w-full items-center justify-center overflow-hidden rounded-[60px] bg-gradient-to-br from-[#FFF9F5] via-[#FFF0E5] to-[#FFF9F5] p-8 md:p-16 shadow-[0_30px_60px_-15px_rgba(255,106,0,0.1)]">
           
-          {/* DATA GRID & GROWTH BARS */}
-          <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] [background-size:40px_40px]" />
-          
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex h-64 items-end justify-around gap-2 px-10 opacity-20">
-            {[...Array(15)].map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{ height: [40, Math.random() * 150 + 50, 40] }}
-                transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="flex-1 rounded-t-md bg-orange-600"
+          {/* BACKGROUND MESH GRID (Exact match to image texture) */}
+          <div className="absolute inset-0 z-0 opacity-[0.15] [background-image:linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] [background-size:40px_40px]" />
+
+          {/* THE ANIMATED "SNAKE" BORDERS (Glowing Orange Lines) */}
+          <div className="pointer-events-none absolute inset-0 z-10">
+            <svg className="h-full w-full overflow-visible">
+              <defs>
+                <filter id="orangeGlow">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              {/* Top-Right Line */}
+              <motion.rect
+                x="0" y="0"
+                width="100%" height="100%"
+                rx="60"
+                fill="none"
+                stroke="#FF6A00"
+                strokeWidth="6"
+                strokeLinecap="round"
+                filter="url(#orangeGlow)"
+                initial={{ pathLength: 0.2, pathOffset: 0.05 }}
+                animate={{ pathOffset: 1.05 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
               />
-            ))}
+
+              {/* Bottom-Left Line (Starts Opposite) */}
+              <motion.rect
+                x="0" y="0"
+                width="100%" height="100%"
+                rx="60"
+                fill="none"
+                stroke="#FF6A00"
+                strokeWidth="6"
+                strokeLinecap="round"
+                filter="url(#orangeGlow)"
+                initial={{ pathLength: 0.2, pathOffset: 0.55 }}
+                animate={{ pathOffset: 1.55 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              />
+            </svg>
           </div>
 
           {/* CONTENT AREA */}
-          <div className="relative z-30 flex flex-col items-center px-6 text-center">
-             <motion.div
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="mb-8 flex h-20 w-20 items-center justify-center rounded-full border-r-2 border-t-2 border-orange-600 p-4"
-              >
-                <div className="h-full w-full animate-pulse rounded-full bg-orange-600 opacity-40 blur-[15px]" />
-              </motion.div>
-
-            <h2 className="mb-6 max-w-4xl text-[36px] font-black uppercase leading-[1] tracking-tighter text-white md:text-[64px]">
-              {title}
+          <div className="relative z-20 flex flex-col items-center text-center">
+            
+            {/* Headline with Exact "First Rank" Orange Italic Styling */}
+            <h2 className="mb-6 max-w-4xl text-[32px] font-[900] leading-[1.2] tracking-tight text-[#444] md:text-[52px] lg:text-[58px]">
+              Get Your Website <span className="italic text-[#FF6A00]">First Rank</span> on Google
             </h2>
 
-            <p className="mb-10 max-w-xl text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
-             {subtitle}
+            {/* Subtitle Paragraph */}
+            <p className="mb-12 max-w-2xl text-[16px] font-medium leading-relaxed text-[#666] md:text-[18px]">
+              Boost your business visibility with proven SEO strategies. Simple, powerful tools to monitor your rankings.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row">
-                          <button className="rounded-full bg-orange-600 px-10 py-4 text-xs font-bold uppercase tracking-widest text-white transition-all hover:scale-105 active:scale-95">
-                              {primaryBtn.label}
-              </button>
-              <button className="rounded-full border border-white/20 px-10 py-4 text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-white hover:text-black">
-                {secondaryBtn.label}
-              </button>
+            {/* THE BUTTONS: Ready to Rank? Want More Traffic? Need Top Results? */}
+            <div className="flex flex-wrap justify-center gap-5">
+              {[
+                "Ready to Rank #1?",
+                "Want More Traffic?",
+                "Need Top Results?"
+              ].map((text, i) => (
+                <button
+                  key={i}
+                  className="rounded-full border border-white/80 bg-white/40 px-8 py-3.5 text-[14px] font-bold text-[#555] shadow-sm backdrop-blur-md transition-all hover:bg-white/90 hover:scale-105 active:scale-95"
+                >
+                  {text}
+                </button>
+              ))}
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .outline-text {
-          color: transparent;
-          -webkit-text-stroke: 1px white;
-        }
-      `}</style>
     </section>
   );
 }

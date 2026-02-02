@@ -9,7 +9,7 @@ export function TextSlider({ texts }: Pick<WorkprocessSectionProps, 'texts'>) {
             className="flex items-center justify-center gap-8 lg:gap-[38px]"
             key={index}
           >
-            <h3 className="h2 font-secondary text-accent-900 dark:text-white">
+            <h3 className="h3 font-secondary text-accent-900 dark:text-white">
               {text}
             </h3>
             <span className="text-xl text-primary lg:text-[50px]">

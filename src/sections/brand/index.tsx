@@ -44,7 +44,7 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
   return (
     <div className="flex select-none flex-nowrap overflow-hidden whitespace-nowrap py-3">
       <motion.h3
-        className="flex gap-10 whitespace-nowrap text-xl font-black uppercase italic tracking-tight md:gap-20 md:text-xl"
+        className="flex gap-10 whitespace-nowrap h3 font-black uppercase italic tracking-tight md:gap-20 "
         style={{ x, skew: skewVelocity }}
       >
         {[...Array(4)].map((_, i) => (

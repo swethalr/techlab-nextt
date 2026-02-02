@@ -45,6 +45,8 @@ export function HeroSection({ className }: { className?: string }) {
         className
       )}
     >
+
+       
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
 
 <div className="relative top-0 flex min-h-screen w-full flex-col items-center justify-start pt-20 pb-12 overflow-visible lg:sticky lg:justify-center lg:pt-5 lg:pb-0">
@@ -52,18 +54,18 @@ export function HeroSection({ className }: { className?: string }) {
           style={{ x: bgTextX }}
           className="pointer-events-none absolute left-0 top-[25%] z-0 hidden select-none whitespace-nowrap opacity-[0.9] lg:block" 
         >
-          <span className="pointer-events-none block select-none text-[15vw] font-bold uppercase leading-[1.25] text-slate-200">
+          <span className="pointer-events-none block select-none text-[15vw] font-bold uppercase leading-[1.25] text-slate-100">
             Zammy Zaif
           </span>
         </motion.div>
-
+<div className="absolute top-[20%] right-[10%] w-[35%] h-[60%] bg-[#3cb878] blur-[100px] rounded-full animate-pulse" />
         <ParticleBackground />
 
         <div className="relative z-10 w-full">
           <Container className="w-full">
             <div className="flex flex-col items-center gap-12 lg:grid lg:grid-cols-12 lg:gap-[40px]">
               {/* TEXT CONTENT */}
-              <motion.div className="order-1 w-full lg:col-span-6 lg:text-left xl:col-span-5">
+              <motion.div className="order-1 w-full lg:col-span-7 lg:text-left xl:col-span-7">
                 <div className="relative mb-1  flex  w-full flex-col justify-center   lg:justify-start">
                   <Swiper
                     modules={[Autoplay, EffectFade]}
@@ -88,13 +90,13 @@ export function HeroSection({ className }: { className?: string }) {
                               : 'pointer-events-none invisible translate-y-4 opacity-0'
                           )}
                         >
-                          <h5 className="mb-2 block text-[15px] font-bold uppercase tracking-[0.3em] text-orange-600 md:text-xs lg:text-[20px]">
+                          <h5 className="mb-2 block h5 font-bold uppercase tracking-[0.3em] text-[#3cb878] md:text-xs lg:text-[20px]">
                             {item.subtitle}
                           </h5>
-                          <h1 className="mb-4 text-center text-[40px] font-black uppercase leading-[1.1]  text-slate-900 sm:text-[62px] md:text-[68px] lg:text-left lg:text-[62px]">
+                          <h1 className="mb-4 text-center h1 uppercase leading-[1.1]  text-slate-900  lg:text-left ">
                             {item.title}
                           </h1>
-                          <p className="mx-auto max-w-[440px] text-center text-[13px] font-medium leading-relaxed text-slate-600 md:text-base lg:mx-0 lg:text-left">
+                          <p className="mx-auto max-w-[440px] text-center p font-medium leading-relaxed text-slate-700 md:text-base lg:mx-0 lg:text-left">
                             {item.para}
                           </p>
                         </div>
@@ -104,7 +106,7 @@ export function HeroSection({ className }: { className?: string }) {
                 </div>
 
                 {/* PAGINATION */}
-                <div className="mb-2 flex items-center justify-center gap-4 lg:mb-2 lg:justify-start">
+                <div className="mb-2 flex items-center justify-center gap-4 lg:mb-2 lg:mt-2 lg:justify-start">
                   {carouselItems.map((_, i) => ( 
                     <div
                       key={i}
@@ -115,7 +117,7 @@ export function HeroSection({ className }: { className?: string }) {
                         className={cn(
                           'h-[2px] rounded-full transition-all duration-700 ease-in-out',
                           activeIndex === i
-                            ? 'w-12 bg-orange-600 lg:w-20'
+                            ? 'w-12 bg-[#3cb878] lg:w-20'
                             : 'w-4 bg-slate-200 group-hover:bg-slate-400 lg:w-6'
                         )}
                       />
@@ -126,7 +128,7 @@ export function HeroSection({ className }: { className?: string }) {
                 {/* STATS & BUTTON */}
                 <div className="flex flex-col items-center gap-4 lg:items-start">
                   <div className="group relative origin-center  md:scale-90 lg:origin-left ">
-                    <div className="relative flex items-center gap-4 rounded-[50px] border border-white/60 bg-[#FC5F00] p-2 shadow-xl backdrop-blur-md lg:gap-1 lg:p-3">
+                    <div className="relative flex items-center gap-2 rounded-[50px] border border-white/60 bg-[#3cb878] p-4 shadow-xl backdrop-blur-md lg:gap-4 lg:p-10">
                       <div className="flex items-center -space-x-4">
                         {customers.slice(0, 4).map((customer: any, index: number) => (
                           <div key={index} className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-white shadow-lg lg:h-10 lg:w-10">
@@ -138,7 +140,7 @@ export function HeroSection({ className }: { className?: string }) {
                         <h3 className="text-xl font-bold text-slate-900 leading-none">
                           <Counter end={statisticsCounterInfo?.count ?? 0} suffix={statisticsCounterInfo?.suffix ?? ''} />
                         </h3>
-                        <h6 className="text-[15px] font-bold  text-white tracking-[0.2em] ">
+                        <h6 className="h5 font-bold  text-white tracking-[0.1em] ">
                           {statisticsCounterInfo?.about ?? 'Satisfied Clients'}
                         </h6>
                       </div>
@@ -146,8 +148,8 @@ export function HeroSection({ className }: { className?: string }) {
                   </div>
 
                   {ctaButton && (
-                    <Button asChild className="h-[42px] rounded-full bg-slate-900 px-2  text-white transition-all hover:bg-orange-600">
-                      <CustomLink href={ctaButton.href} className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em]">
+                    <Button asChild className="h-[42px] rounded-[50px] bg-slate-900 px-2  text-white transition-all hover:bg-[#3cb878]">
+                      <CustomLink href={ctaButton.href} className="flex items-center gap-2 h6 font-bold uppercase tracking-[0.15em]">
                         {ctaButton.label} <FaArrowRight />
                       </CustomLink>
                     </Button>
@@ -156,7 +158,7 @@ export function HeroSection({ className }: { className?: string }) {
               </motion.div>
 
               {/* WORLD GLOBE AREA - RESTORED TO FULL SIZE */}
-              <div className="order-2 flex w-full items-center justify-center  lg:col-span-6 lg:justify-end xl:col-span-7 overflow-hidden">
+              <div className="order-2 flex w-full items-center justify-center  lg:col-span-6 lg:justify-end xl:col-span-5 overflow-hidden">
                 <div className="pointer-events-none absolute right-[-5%] z-0 h-[60%] w-[60%] rounded-full bg-orange-100/50 blur-[100px]" />
                 <div className="relative z-1 flex aspect-square h-[100vw] w-[100vw] items-center justify-center overflow-visible sm:h-[80vw] sm:w-[80vw] lg:h-[750px] lg:w-[750px] lg:mr-[-60px] xl:mr-[-100px]">
                   <WorldGlobe />

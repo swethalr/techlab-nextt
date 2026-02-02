@@ -27,12 +27,13 @@ module.exports = {
       '2xl': '3rem', // 48px
       '3xl': '4.25rem', // 68px
       '4xl': '5.875rem', // 94px
+      '5xl':'6.25rem'
     },
     extend: {
       colors: {
         primary: {
           light: '#DF2A19',
-          DEFAULT: '#B91202',
+          DEFAULT: '#3cb878', // #FF4F00
         },
         accent: {
           100: '#F5F4FA',

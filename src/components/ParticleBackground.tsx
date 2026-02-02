@@ -51,7 +51,7 @@ export const ParticleBackground = () => {
                   modes: {
                     grab: {
                       distance: 260,
-                      links: { opacity: 0.6, color: '#ff3300' },
+                      links: { opacity: 0.6, color: '#3cb878' },
                     },
                   },
                 },
@@ -66,14 +66,14 @@ export const ParticleBackground = () => {
             modes: {
               grab: {
                 distance: 260,
-                links: { opacity: 0.6, color: '#ff3300' },
+                links: { opacity: 0.6, color: '#3cb878' },
               },
             },
           },
           particles: {
-            color: { value: '#ff5100' },
+            color: { value: '#3cb878' },
             links: {
-              color: '#fd4800',
+              color: '#3cb878',
               distance: 200,
               enable: true,
               opacity: 0.4,
