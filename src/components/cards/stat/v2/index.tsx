@@ -16,11 +16,11 @@ export function StatCard({ icon, title, value, counterSuffix }: StatCardProps) {
         </span>
       </span>
       <div className="-ml-5 flex min-h-[120px] flex-1 flex-col justify-center  rounded-5 bg-[#ddffee] p-30px py-2.5 pl-10  dark:bg-accent-700">
-        <h3 className="font-secondary h3 font-bold leading-[1.25] text-accent-900 dark:text-white h3">
+        <h3 className="h3 h3 font-secondary font-bold leading-[1.25] text-accent-900 dark:text-white">
           <Counter end={value} suffix={counterSuffix} />
-          <span className="sr-only h3">Counter</span>
+          <span className="h3 sr-only">Counter</span>
         </h3>
-        <p className="-mt-2.5 p ">{title}</p>
+        <p className="p -mt-2.5 ">{title}</p>
       </div>
     </div>
   );

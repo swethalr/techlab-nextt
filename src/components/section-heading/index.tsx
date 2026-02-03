@@ -34,9 +34,9 @@ export function SectionHeading({
           {subtitle}
         </span>
       )}
-      <h2 className="font-secondary text-xl font-bold leading-[1.25] text-accent-900 dark:text-white md:text-2xl">
+      <h3 className="font-secondary h3 font-bold leading-[1.25] text-accent-900 dark:text-white ">
         {title}
-      </h2>
+      </h3>
       {description && (
         <p className={'mt-5 whitespace-pre-line'}>{description}</p>
       )}

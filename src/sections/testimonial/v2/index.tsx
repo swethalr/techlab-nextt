@@ -11,7 +11,7 @@ import { testimonialSectionData } from '@/data/testimonial-section/v2';
 import { cn } from '@/src/utils/shadcn';
 
 const btnPrevNextClasses = cn(
-  'bg-gradient-to-b from-[#FFDDC7] to-[#FFC8A9] text-primary-light hover:text-white hover:bg-primary-light'
+  'bg-[#3cb878]/10 text-primary hover:text-white hover:bg-[#3cb878]'
 );
 
 export interface TestimonialSectionProps {
@@ -24,9 +24,9 @@ export function TestimonialSection() {
   return (
     <section className="section-padding-primary relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:40px_40px]" />
-       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute left-[20%] top-[-10%] h-[20%] w-[60%] rounded-full bg-[#ff6a00]/30 blur-[100px]" />
-        </div>
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute left-[20%] top-[-10%] h-[20%] w-[60%] rounded-full bg-[#3cb878]/30 blur-[100px]" />
+      </div>
       <Container>
         <div className="mb-10 mr-30px max-w-[680px] md:mb-[3.75rem] md:pr-[140px]">
           <SectionHeading {...sectionHeading} />

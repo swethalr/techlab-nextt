@@ -3,7 +3,7 @@
 import { Container } from '@/src/components/container';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
- // Add this if your carousel uses dots
+// Add this if your carousel uses dots
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css/autoplay';
@@ -11,8 +11,6 @@ import 'swiper/css/pagination';
 import { useDomReady } from '@/src/hooks/dom-ready';
 import { WorkprocessCard } from '../card';
 import { WorkprocessSectionProps } from '..';
-
-
 
 export function WorkCardsCaraousl({
   cards,

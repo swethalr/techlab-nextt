@@ -1,8 +1,8 @@
 import { CustomLink } from '@/src/components/custom-link';
 import Image from 'next/image';
 
-import logoLight from 'public/assets/images/brand/logo-light.png';
-import logoDark from 'public/assets/images/brand/logo-dark.png';
+import logoLight from 'public/assets/images/brand/google-ranking-expert.png';
+import logoDark from 'public/assets/images/brand/google-ranking-expert.png';
 
 export function BrandLogo() {
   return (

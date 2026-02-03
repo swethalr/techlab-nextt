@@ -110,7 +110,7 @@ function SquareCube({ s, index }: { s: any; index: number }) {
           <span className="text-xl font-black tracking-tighter text-white">
             {s.value}
           </span>
-          <p className="mt-2 p font-bold uppercase tracking-widest text-white/70">
+          <p className="p mt-2 font-bold uppercase tracking-widest text-white/70">
             {s.label}
           </p>
         </div>

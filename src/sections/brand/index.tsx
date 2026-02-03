@@ -12,8 +12,6 @@ import {
   useMotionValue,
 } from 'framer-motion';
 
-
-
 interface ParallaxProps {
   items: string[];
   baseVelocity: number;
@@ -24,9 +22,12 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, { damping: 50, stiffness: 400 });
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
   const skewVelocity = useTransform(smoothVelocity, [-1000, 1000], [-12, 12]);
-  
+
   const x = useTransform(baseX, (v) => {
     const min = -45;
     const max = -20;
@@ -44,7 +45,7 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
   return (
     <div className="flex select-none flex-nowrap overflow-hidden whitespace-nowrap py-3">
       <motion.h3
-        className="flex gap-10 whitespace-nowrap h3 font-black uppercase italic tracking-tight md:gap-20 "
+        className="h3 flex gap-10 whitespace-nowrap font-black uppercase italic tracking-tight md:gap-20 "
         style={{ x, skew: skewVelocity }}
       >
         {[...Array(4)].map((_, i) => (
@@ -53,10 +54,10 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
               <span
                 key={idx}
                 className={`transition-all duration-700 ${
-                  variant === 'accent' 
-                    ? 'text-orange-600' 
-                    : variant === 'white' 
-                      ? 'marquee-stroke-thin text-transparent ' 
+                  variant === 'accent'
+                    ? 'text-orange-600'
+                    : variant === 'white'
+                      ? 'marquee-stroke-thin text-transparent '
                       : 'text-slate-900'
                 }`}
               >
@@ -74,7 +75,7 @@ const ParallaxRow = ({ items, baseVelocity = 100, variant }: ParallaxProps) => {
 };
 
 export function BrandMarquee() {
-    const { aiResults, brands } = brandMarqueeData;
+  const { aiResults, brands } = brandMarqueeData;
   return (
     <section className="relative w-full overflow-hidden bg-white py-12 md:py-20">
       {/* BACKGROUND EFFECTS */}
@@ -90,9 +91,15 @@ export function BrandMarquee() {
       </div>
 
       <style jsx global>{`
-        .marquee-stroke-thin { -webkit-text-stroke: 1px #ff1e00; }
-        @media (min-width: 768px) { .marquee-stroke-thin { -webkit-text-stroke: 2.5px #ff6600; } }
+        .marquee-stroke-thin {
+          -webkit-text-stroke: 1px #ff1e00;
+        }
+        @media (min-width: 768px) {
+          .marquee-stroke-thin {
+            -webkit-text-stroke: 2.5px #ff6600;
+          }
+        }
       `}</style>
     </section>
   );
-} 
+}

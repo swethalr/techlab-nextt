@@ -18,7 +18,8 @@ import GoogleRankingExpertSection from '@/src/google-ranking-expert/banner';
 // 1. SEO Metadata - This is vital for the Google Ranking Expert page
 export const metadata: Metadata = {
   title: 'Google SEO Consultant & Ranking Expert | Zammy Zaif',
-  description: 'Dominate Google Search results with expert algorithm-based strategies. Specialist in securing Position #1 rankings.',
+  description:
+    'Dominate Google Search results with expert algorithm-based strategies. Specialist in securing Position #1 rankings.',
 };
 
 export default function Page() {
@@ -40,8 +41,6 @@ export default function Page() {
           <GMBSEO />
           <FAQSection />
         */}
-        
-       
       </main>
 
       {/* Footer */}

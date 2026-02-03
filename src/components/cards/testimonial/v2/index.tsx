@@ -14,7 +14,7 @@ export function TestimonialCard({
   speech,
 }: TestimonialCardProps) {
   return (
-    <div className="h-full rounded-5 bg-gradient-to-b from-[#FFDDC7] to-[#FFC8A9] p-6  dark:bg-accent-700 sm:p-10">
+    <div className="h-full rounded-5 bg-[#3cb878]/10 p-6  dark:bg-accent-700 sm:p-10">
       <div className="text-primary">
         <StarRating staticRating={rating} />
       </div>

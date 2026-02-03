@@ -20,9 +20,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
-
 
 const navigationButtonCommonClasses = cn(
   'w-[60px] relative z-40 h-[60px] grid place-items-center leading-none text-[1.25rem] bg-accent-900 hover:bg-primary transition-all duration-300 text-white rounded-full'

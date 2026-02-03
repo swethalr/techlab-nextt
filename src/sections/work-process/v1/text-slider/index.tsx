@@ -1,17 +1,25 @@
-import { WorkprocessSectionProps } from '..';
+'use client';
 
-export function TextSlider({ texts }: Pick<WorkprocessSectionProps, 'texts'>) {
+import React from 'react';
+
+// Define the local requirement instead of importing from parent to break the circle
+interface SliderProps {
+  texts: string[];
+}
+
+export function TextSlider({ texts }: SliderProps) {
   if (texts && texts.length > 0) {
     return (
       <div className="flex animate-infinite-scroll items-center justify-center gap-8 md:justify-start lg:gap-[38px]">
-        {texts.map((text, index) => (
+        {/* Explicitly typed index as number to avoid implicit 'any' errors */}
+        {texts.map((text: string, index: number) => (
           <div
             className="flex items-center justify-center gap-8 lg:gap-[38px]"
             key={index}
           >
-            <h3 className="h3 font-secondary text-accent-900 dark:text-white">
+            <h4 className="md:text-xl text-lg font-bold font-secondary text-accent-900 dark:text-white">
               {text}
-            </h3>
+            </h4>
             <span className="text-xl text-primary lg:text-[50px]">
               <svg
                 width="1em"
@@ -28,5 +36,5 @@ export function TextSlider({ texts }: Pick<WorkprocessSectionProps, 'texts'>) {
       </div>
     );
   }
-  return <></>;
+  return null;
 }

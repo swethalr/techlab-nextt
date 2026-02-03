@@ -18,14 +18,15 @@ export const brandMarqueeData = {
 };
 
 export const ctaBannerData = {
-  title: "Get Your Website First Rank On Google",
-  subtitle: "Boost your business visibility with proven SEO strategies.Simple, powerful tools to monitor your rankings",
+  title: 'Get Your Website First Rank On Google',
+  subtitle:
+    'Boost your business visibility with proven SEO strategies.Simple, powerful tools to monitor your rankings',
   primaryBtn: {
-    label: "Start Ranking",
-    href: "/contact",
+    label: 'Start Ranking',
+    href: '/contact',
   },
   secondaryBtn: {
-    label: "Free Analysis",
-    href: "/analysis",
+    label: 'Free Analysis',
+    href: '/analysis',
   },
 };

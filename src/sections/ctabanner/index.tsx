@@ -5,11 +5,10 @@ import { motion } from 'framer-motion';
 
 export default function CtaBanner() {
   return (
-    <section className="relative bg-white px-4 py-20 font-sans overflow-hidden">
+    <section className="font-sans relative overflow-hidden bg-white px-4 py-20">
       <div className="mx-auto w-full max-w-6xl">
         {/* Main Banner Container with Exact Light Peach Gradient */}
-        <div className="relative flex min-h-[420px] w-full items-center justify-center overflow-hidden rounded-[60px] bg-gradient-to-br from-[#FFF9F5] via-[#FFF0E5] to-[#FFF9F5] p-8 md:p-16 shadow-[0_30px_60px_-15px_rgba(255,106,0,0.1)]">
-          
+        <div className="relative flex min-h-[420px] w-full items-center justify-center overflow-hidden rounded-[60px] bg-gradient-to-br from-[#FFF9F5] via-[#FFF0E5] to-[#FFF9F5] p-8 shadow-[0_30px_60px_-15px_rgba(255,106,0,0.1)] md:p-16">
           {/* BACKGROUND MESH GRID (Exact match to image texture) */}
           <div className="absolute inset-0 z-0 opacity-[0.15] [background-image:linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] [background-size:40px_40px]" />
 
@@ -28,8 +27,10 @@ export default function CtaBanner() {
 
               {/* Top-Right Line */}
               <motion.rect
-                x="0" y="0"
-                width="100%" height="100%"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
                 rx="60"
                 fill="none"
                 stroke="#FF6A00"
@@ -38,13 +39,15 @@ export default function CtaBanner() {
                 filter="url(#orangeGlow)"
                 initial={{ pathLength: 0.2, pathOffset: 0.05 }}
                 animate={{ pathOffset: 1.05 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
               />
 
               {/* Bottom-Left Line (Starts Opposite) */}
               <motion.rect
-                x="0" y="0"
-                width="100%" height="100%"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
                 rx="60"
                 fill="none"
                 stroke="#FF6A00"
@@ -53,34 +56,36 @@ export default function CtaBanner() {
                 filter="url(#orangeGlow)"
                 initial={{ pathLength: 0.2, pathOffset: 0.55 }}
                 animate={{ pathOffset: 1.55 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
               />
             </svg>
           </div>
 
           {/* CONTENT AREA */}
           <div className="relative z-20 flex flex-col items-center text-center">
-            
             {/* Headline with Exact "First Rank" Orange Italic Styling */}
             <h2 className="mb-6 max-w-4xl text-[32px] font-[900] leading-[1.2] tracking-tight text-[#444] md:text-[52px] lg:text-[58px]">
-              Get Your Website <span className="italic text-[#FF6A00]">First Rank</span> on Google
+              Get Your Website{' '}
+              <span className="italic text-[#FF6A00]">First Rank</span> on
+              Google
             </h2>
 
             {/* Subtitle Paragraph */}
             <p className="mb-12 max-w-2xl text-[16px] font-medium leading-relaxed text-[#666] md:text-[18px]">
-              Boost your business visibility with proven SEO strategies. Simple, powerful tools to monitor your rankings.
+              Boost your business visibility with proven SEO strategies. Simple,
+              powerful tools to monitor your rankings.
             </p>
 
             {/* THE BUTTONS: Ready to Rank? Want More Traffic? Need Top Results? */}
             <div className="flex flex-wrap justify-center gap-5">
               {[
-                "Ready to Rank #1?",
-                "Want More Traffic?",
-                "Need Top Results?"
+                'Ready to Rank #1?',
+                'Want More Traffic?',
+                'Need Top Results?',
               ].map((text, i) => (
                 <button
                   key={i}
-                  className="rounded-full border border-white/80 bg-white/40 px-8 py-3.5 text-[14px] font-bold text-[#555] shadow-sm backdrop-blur-md transition-all hover:bg-white/90 hover:scale-105 active:scale-95"
+                  className="rounded-full border border-white/80 bg-white/40 px-8 py-3.5 text-[14px] font-bold text-[#555] shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-white/90 active:scale-95"
                 >
                   {text}
                 </button>

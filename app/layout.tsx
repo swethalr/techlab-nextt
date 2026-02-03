@@ -43,7 +43,7 @@ export default async function RootLayout({ children }: Props) {
             )}
           >
             <main>{children}</main>
-            <ModeToggle />
+            
           </div>
         </ThemeProvider>
         <Toaster

@@ -11,7 +11,7 @@ export const ParticleBackground = () => {
   const id = useId();
 
   useEffect(() => {
-    // Explicitly typing 'engine' as 'any' to fix ts(7006) 
+    // Explicitly typing 'engine' as 'any' to fix ts(7006)
     // and removing the Engine import to fix ts(6133) & ts(2307)
     initParticlesEngine(async (engine: any) => {
       await loadSlim(engine);
@@ -23,7 +23,7 @@ export const ParticleBackground = () => {
   if (!init) return null;
 
   return (
-    <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
+    <div className="pointer-events-none absolute inset-0 z-0 h-full w-full">
       <Particles
         id={id}
         className="h-full w-full"

@@ -80,9 +80,7 @@ export function Header() {
                     <FaMagnifyingGlass />
                   </button>
                 </li>
-                <li>
-                  
-                </li>
+                <li></li>
                 <li>
                   <OffCanvas />
                 </li>

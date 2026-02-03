@@ -14,7 +14,7 @@ const testimonials = [
   {
     id: 2,
     name: 'Rajal Rai Durai',
-    role: ' Dentist', 
+    role: ' Dentist',
     image: '/assets/images/clients/abishek.jpeg',
     text: 'Versa Forge laid a strong SEO foundation for my practice. Though it’s early, I already see better visibility and structured improvements across digital platforms.',
     color: 'from-purple-500 to-indigo-600',
@@ -22,7 +22,7 @@ const testimonials = [
   {
     id: 3,
     name: 'Mrs. Fathima M.P.T',
-    role: 'Physiotherapist', 
+    role: 'Physiotherapist',
     image: '/assets/images/clients/abishek.jpeg',
     text: 'From near-invisible to page one! Versa Forge’s SEO helped new patients easily discover us, significantly boosting walk-ins, visibility, and trust in our physiotherapy clinic.',
     color: 'from-pink-500 to-rose-600',
@@ -81,10 +81,13 @@ export default function TitanTestimonials() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#050505]">
       {/* BACKGROUND DECOR bg-[#050505]*/}
       <div className="opacity-2 pointer-events-none absolute top-1 w-full text-center">
-        <h2 className=" h2  font-bold uppercase mt-8 text-white">
+        <h2 className=" h2  mt-8 font-bold uppercase text-white">
           Testimonials
         </h2>
-         <h5 className=" h5 font-primary uppercase tracking-wider text-primary  mt-4"> What Our Clients Say</h5>
+        <h5 className=" h5 mt-4 font-primary uppercase tracking-wider  text-primary">
+          {' '}
+          What Our Clients Say
+        </h5>
       </div>
 
       <div className="relative flex h-[950px] w-full items-center justify-center [perspective:2000px]">
@@ -152,16 +155,16 @@ function TestimonialCard({ t, index, total }: any) {
           <span className="text-xs font-black text-white">ZZ</span>
         </div>
 
-        <p className="p font-bold italic leading-tight tracking-tight text-white p">
+        <p className="p p font-bold italic leading-tight tracking-tight text-white">
           "{t.text}"
         </p>
 
         <div className="flex items-center gap-4">
-         <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-white/20 bg-black/20 shadow-lg">
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-white/20 bg-black/20 shadow-lg">
             {t.image ? (
-              <img 
-                src={t.image} 
-                alt={t.name} 
+              <img
+                src={t.image}
+                alt={t.name}
                 className="h-full w-full object-cover"
               />
             ) : (

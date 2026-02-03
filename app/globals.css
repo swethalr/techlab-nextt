@@ -14,17 +14,17 @@
   }
 
   .h1 {
-    @apply text-[3.25rem] font-bold leading-[1.15] md:text-[3.5rem] xl:text-[4.7rem];
+    @apply text-[3.25rem] font-bold leading-[1.15] md:text-[4.2rem] xl:text-[4.7rem];
     /* Mobile: 36px | Tablet: 56px | PC: 75px */
   }
 
   .h2 {
-    @apply text-[2.75rem] font-bold leading-[1.25] md:text-[2.5rem] xl:text-[3.0rem];
+    @apply text-[2.75rem] font-bold leading-[1.25] md:text-[3rem] xl:text-[3.0rem];
     /* Mobile: 28px | Tablet: 40px | PC: 48px */
   }
 
   .h3 {
-    @apply text-[1.5rem] font-bold leading-[1.25] md:text-[2rem] xl:text-[2.25rem];
+    @apply text-[1.5rem] font-bold leading-[1.25] md:text-[2.25rem] xl:text-[2.25rem];
     /* Mobile: 24px | Tablet: 32px | PC: 36px */
   }
 
@@ -72,7 +72,8 @@
 
   /* Orange Glow for cards */
   .shadow-advanced-glow {
-    box-shadow: 0 0 60px -15px rgba(249, 115, 22, 0.45),
+    box-shadow:
+      0 0 60px -15px rgba(249, 115, 22, 0.45),
       0 15px 30px -10px rgba(0, 0, 0, 0.05);
   }
 }
@@ -85,7 +86,9 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #f97316;
-  animation: typing 1.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation:
+    typing 1.5s steps(30, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 /* 2. Shine Sweep (for buttons or images) */
